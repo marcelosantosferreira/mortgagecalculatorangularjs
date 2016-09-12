@@ -1,5 +1,5 @@
 ## Screenshot
-![alt text](screenshot.png "MyBestHelper Challenge")
+![alt text](screenshot.png "Mortgage Calculator - Angular JS")
 
 ## Synopsis
 
