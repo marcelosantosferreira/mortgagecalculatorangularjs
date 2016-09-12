@@ -1,3 +1,6 @@
+## Screenshot
+![alt text](screenshot.png "MyBestHelper Challenge")
+
 ## Synopsis
 
 A Mortgage Calculator prototype (a test for a job position).
