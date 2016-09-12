@@ -1,0 +1,26 @@
+{
+  "name": "mortgage-calculator",
+  "description": "A simple mortgage calculator",
+  "main": "index.html",
+  "authors": [
+    "Marcelo Santos Ferreira msferreira@gmail.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mortgage"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"bootstrap": "^3.3.6",
+    "font-awesome": "~4.4.0",
+    "angular": "~1.5.8",
+    "angular-mocks": "^1.5.8"
+  }
+}

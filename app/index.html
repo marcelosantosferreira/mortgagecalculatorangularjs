@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mortgageCalculatorApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mortgage Calculator with AngularJS</title>
+	<!-- build:css styles/main.css -->
+	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- endbuild -->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="container" ng-controller="mortgageController">
+		<div class="row">
+			<div class="col-md-4">
+				<!-- FORM/BEGIN -->
+				<h2>Inputs</h2>
+				<p>Please inform the values and click <b>Calculate</b>. You will be given an option to receive the simulation in your Inbox.
+				</p>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputMortgageAmount" class="control-label col-md-6">Mortgage Amount</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="inputMortgageAmount" placeholder="$ 100,000" ng-model="mortgage.amount" ng-keyup="calculate()">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputInterestRate" class="control-label col-md-6">Interest Rate</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="inputInterestRate" placeholder="%" ng-model="mortgage.interest" ng-keyup="calculate()">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputAmortizationPeriod" class="control-label col-md-6">Amortization Period</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="inputAmortizationPeriod" placeholder="years" ng-model="mortgage.period" ng-keyup="calculate()">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-12" align="center">
+							<button type="button" class="btn btn-success" ng-click="activate()">Calculate</button>
+						</div>
+					</div>
+				</form>
+				<br/>
+				<hr ng-show="showOutputs"/>
+				<h2 ng-show="showOutputs">Monthly payment <span class="label label-info">{{mortgage.monthlyPayment | currency}}</span></h2>
+				<hr ng-show="showOutputs"/>
+				<div ng-show="showOutputs">
+					<dt>Total Interest:</dt>
+					<dd>{{totalInterest | currency}}</dd>
+					<dt>Average Monthly Interest:</dt>
+					<dd>{{averageMonthlyInterest | currency}}</dd>
+					<dt>Total Payment:</dt>
+					<dd>{{totalPayment | currency}}</dd>
+				</div>
+				<!-- FORM/END -->
+			</div>
+			<div class="col-md-8" ng-show="showOutputs">
+				<h2>Amortization Table</h2>
+				<p>You will be given an option to receive the simulation in your Inbox.
+				</p>
+
+				<div id="divAmortizationTable">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- build:js scripts/main.js -->
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers.js"></script>
+	<script src="scripts/services.js"></script>
+	<!-- endbuild -->
+</body>
+
+</html>

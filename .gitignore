@@ -1,3 +1,9 @@
+# Node Modules
+node_modules/
+
+# Bower Components
+bower_components/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
