@@ -1,7 +1,7 @@
 ## Synopsis
 
 A Mortgage Calculator prototype (a test for a job position).
-Intended to be integrated with a ASP.Net MVC project - published here as well
+Intended to be integrated with a ASP.Net MVC project - published here as well [mortgagecalculatoraspnetmvc]
 
 ## Built using
 
