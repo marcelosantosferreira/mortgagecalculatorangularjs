@@ -49,4 +49,4 @@ Angular Mocks
 
 Access the [test] folder and type:
 
-karma start karma.conf.js
+	karma start karma.conf.js
