@@ -1,10 +1,6 @@
 ## Screenshot
 ![alt text](screenshot.png "Mortgage Calculator - Angular JS")
 
-## Demo
-
-[a link](http://marcelosantosferreira.tk/mortgagecalculator)
-
 ## Synopsis
 
 A Mortgage Calculator prototype (a test for a job position).
@@ -54,3 +50,7 @@ Angular Mocks
 Access the [test] folder and type:
 
 	karma start karma.conf.js
+	
+## Demo
+
+[See it online](http://marcelosantosferreira.tk/mortgagecalculator)
