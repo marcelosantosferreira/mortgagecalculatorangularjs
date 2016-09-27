@@ -9,7 +9,7 @@ Intended to be integrated with a ASP.Net MVC project - published here as well [m
 
 ## Built using
 
-AngularJS
+AngularJS + Bootstrap
 
 ## My Goal
 
